@@ -1,0 +1,166 @@
+#include <stdio.h>
+
+
+int main() {
+	printf("Panduan Tugas Akhir Algoritma & Pemrogama");
+	
+//  nama : Teguh Prasetio
+//  nim  : 12250511403
+
+    int saldo = 3000000;
+    int p;
+    int t;
+    int s;
+
+    	printf("\n");
+        printf("\n");
+        printf(">>>>>              WELCOME TO             <<<<<\n");
+        printf("\n");
+        printf(">>>>>              BANK TEGUH             <<<<<\n");
+        printf("\n");
+        printf("\n");
+        printf(">>>>>     ATM TUNAI KELIPATAN 100.000     <<<<<\n");
+         printf("\n");
+        
+
+        printf(">>>Masukkan PIN: ");
+        int pin;
+        scanf("%d", &pin);
+
+        if (pin == 112233) { 
+        	printf("\n");
+        	printf(">>>>>     Login Berhasil     <<<<<\n");
+        	printf("\n");
+            while (1) {
+                printf("Pilih Menu:\n");
+                printf(">>> 1. Tarik Tunai\n");
+                printf(">>> 2. Setor Tunai\n");
+                printf(">>> 3. Cek Saldo\n");
+                printf(">>> 4. Keluar\n");
+                printf("\n");
+                printf(">>>Pilih menu: ");
+                scanf("%d", &p);
+
+                switch (p) {
+                    case 1:
+                    	printf("\n");
+                        printf(">>>>>     Tarik Tunai     <<<<<\n");
+                        printf("\n");
+                        printf(">>> Menu:\n");
+                        printf(">>> 1. Rp 100.000\n");
+                        printf(">>> 2. Rp 200.000\n");
+                        printf(">>> 3. Rp 300.000\n");
+                        printf(">>> 4. Rp 500.000\n");
+                        printf(">>> 5. Rp 1.000.000\n");
+						printf("\n");
+                        printf(">>>Masukkan Menu: ");
+                        scanf("%d", &t);
+
+                        switch (t) {
+                            case 1:
+                                if (saldo >= 100000) {
+                                    saldo -= 100000;
+                                    printf("\n");
+                        			printf("Anda Menarik Tunai Rp 100.000\n");
+                                    printf("Saldo Anda: Rp %d\n", saldo);
+                                    printf("\n");
+                                } else {
+                                	 printf("\n");
+                                    printf("Saldo Anda tidak mencukupi!\n");
+                                    printf("\n");
+                                }
+                                break;
+                            case 2:
+                                if (saldo >= 200000) {
+                                    saldo -= 200000;
+                                    printf("\n");
+                                    printf("Anda Menarik Tunai Rp 200.000\n");
+                                    printf("Saldo Anda: Rp %d\n", saldo);
+                                    printf("\n");
+                                } else {
+                                	printf("\n");
+                                    printf("Saldo Anda tidak mencukupi!\n");
+                                    printf("\n");
+                                }
+                                break;
+                            case 3:
+                                if (saldo >= 300000) {
+                                    saldo -= 300000;
+                                    printf("\n");
+                                    printf("Anda Menarik Tunai Rp 300.000\n");
+                                    printf("Saldo Anda: Rp %d\n", saldo);
+                                    printf("\n");
+                                } else {
+                                	printf("\n");
+                                    printf("Saldo Anda tidak mencukupi!\n");
+                                    printf("\n");
+                                }
+                                break;
+                            case 4:
+                                if (saldo >= 500000) {
+                                    saldo -= 500000;
+                                    printf("\n");
+                                    printf("Anda Menarik Tunai Rp 500.000\n");
+                                    printf("Saldo Anda: Rp %d\n", saldo);
+                                    printf("\n");
+                                } else {
+                                	printf("\n");
+                                    printf("Saldo Anda tidak mencukupi!\n");
+                                    printf("\n");
+                                }
+                                break;
+                            case 5:
+                                if (saldo >= 1000000) {
+                                    saldo -= 1000000;
+                                    printf("\n");
+                                    printf("Anda Menarik Tunai Rp 1.000.000\n");
+                                    printf("Saldo Anda: Rp %d\n", saldo);
+                                    printf("\n");
+                                } else {
+                                	printf("\n");
+                                    printf("Saldo Anda tidak mencukupi!\n");
+                                    printf("\n");
+                                }
+                                break;
+                            default:
+                            	printf("\n");
+                                printf("Menu tidak valid!\n");
+                                printf("\n");
+                        }
+                        break;
+
+                    case 2:
+                    	printf("\n");
+                        printf(">>>Masukkan Jumlah Setor Tunai: ");
+                        scanf("%d", &s);
+
+                        saldo += s;
+                        printf("\n");
+                        printf("Setor Tunai Berhasil! Saldo Anda: Rp %d\n", saldo);
+                        printf("\n");
+                        break;
+
+                    case 3:
+                    	printf("\n");
+                        printf("Saldo Anda: Rp %d\n", saldo);
+                        printf("\n");
+                        break;
+
+                    case 4:
+                    	printf("\n");
+                        printf(">>>>>      Terima kasih telah menggunakan ATM BANK TEGUH!      <<<<<\n");
+                        printf("\n");
+                        return 0;
+
+                    default:
+                    	printf("\n");
+                        printf("Menu tidak valid!\n");
+                        printf("\n");
+                }
+            }
+        }else {
+        	printf("\n");
+            printf("PIN anda salah!\n");
+            printf("\n");
+        }
+} 
